@@ -20,9 +20,9 @@ void info_terminal(struct logger *self, char *file, const char *function, char *
 	{
 		arg = va_arg(ap, char*);
 		write(1, arg, strlen(arg));
-		write(1, "\n", 1);
 		i++;
 	}
+	write(1, "\n", 1);
 	va_end(ap);
 }
 
@@ -41,9 +41,10 @@ void error_terminal(struct logger *self, char *file, const char *function, char 
 	{
 		arg = va_arg(ap, char*);
 		write(2, arg, strlen(arg));
-		write(2, "\n", 1);
 		i++;
 	}
+	if (len > 0)
+		write(2, "\n", 1);
 	va_end(ap);
 	//fprintf(stderr, "On line %s in %s/%s :\n%s\n",line, function,file, msg);
 }

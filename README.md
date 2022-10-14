@@ -39,4 +39,4 @@ On line 13 in main/main.c :
 str1 = Hello, str2 = world, i = 25
 
 
-**N'oubliez pas de supprimer le tout avant de remettre votre projet, la norme n'apprecie pas ce logger!**
+**Don't forger to delete everything related to the logger before closing the project, the norminette hates it!**

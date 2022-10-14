@@ -21,7 +21,7 @@ Example of use:
 	log_interface *tlog = conlog.interface;
 	tlog->init(&conlog, av[0]);
 	CLOG(&conlog, 2, "test 1 ", "test 2");
-	ELOG(&conlog, 0, "test 3", "test 4");
+	ELOG(&conlog, 0);
 	CLOG(&conlog, 6, "str1 = ", str1, ", str2 = ", str2, ", i = ", ft_itoa(i));
   
 Will print:

@@ -11,7 +11,7 @@
 The logger takes a minimum of 2 arguments:
 1. Itself
 2. The # of strings you wish to print (can be 0 to use the logger as a way to see if you reach a part of your code)
-3+. The strings you wish to print **(note that this logger can only print strings as of right now)**
+3. The strings you wish to print **(note that this logger can only print strings as of right now)**
 
 Example of use:
 

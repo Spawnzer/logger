@@ -36,3 +36,5 @@ On line 13 in main/main.c :
 
 str1 = Hello, str2 = world, i = 25
 
+
+**N'oubliez pas de supprimer le tout avant de remettre votre projet, la norme n'apprecie pas ce logger!**

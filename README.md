@@ -4,8 +4,10 @@
 2. Add #include "$PATH/log.h" to your main header
 3. Add the C files to your makefile rules
 4. Initialize the logger with the following 2 lines of code:
-      	log_interface *tlog = conlog.interface;
+>
+	log_interface *tlog = conlog.interface;
 	tlog->init(&conlog, argv[0]);
+
 5. Use the macros to print to the desired fd (CLOG for STDOUT, ELOG for STDERR & FLOG to write to a file)
 
 The logger takes a minimum of 2 arguments:

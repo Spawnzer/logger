@@ -30,7 +30,7 @@ struct logger {
 extern logger conlog;
 
 char	*ft_itoa(int n);
-int	ft_len(int nb);
+int		ft_len(int nb);
 char	*ft_make_itoa(char *str, int n, int len);
 
 

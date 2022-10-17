@@ -4,8 +4,10 @@
 2. Add #include "$PATH/log.h" to your main header
 3. Add the C files to your makefile rules
 4. Initialize the logger with the following 2 lines of code:
-      	log_interface *tlog = conlog.interface;
+>
+	log_interface *tlog = conlog.interface;
 	tlog->init(&conlog, argv[0]);
+
 5. Use the macros to print to the desired fd (CLOG for STDOUT, ELOG for STDERR & FLOG to write to a file)
 
 The logger takes a minimum of 2 arguments:
@@ -22,9 +24,9 @@ Example of use:
 	tlog->init(&conlog, av[0]);
 	CLOG(&conlog, 2, "test 1 ", "test 2");
 	ELOG(&conlog, 0);
-	CLOG(&conlog, 6, "str1 = ", str1, ", str2 = ", str2, ", i = ", ft_itoa(i));
+	FLOG(&conlog, 6, "str1 = ", str1, ", str2 = ", str2, ", i = ", ft_itoa(i));
   
-Will print:
+Will print on the terminal:
 
 On line 11 in main/main.c :
 
@@ -32,7 +34,11 @@ test 1 test 2
 
 On line 12 in main/main.c :
 
+and in a $Program_name_log file:
+
 On line 13 in main/main.c :
 
 str1 = Hello, str2 = world, i = 25
 
+
+**Don't forger to delete everything related to the logger before closing the project, the norminette hates it!**

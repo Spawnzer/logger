@@ -24,15 +24,17 @@ Example of use:
 	tlog->init(&conlog, av[0]);
 	CLOG(&conlog, 2, "test 1 ", "test 2");
 	ELOG(&conlog, 0);
-	CLOG(&conlog, 6, "str1 = ", str1, ", str2 = ", str2, ", i = ", ft_itoa(i));
+	FLOG(&conlog, 6, "str1 = ", str1, ", str2 = ", str2, ", i = ", ft_itoa(i));
   
-Will print:
+Will print on the terminal:
 
 On line 11 in main/main.c :
 
 test 1 test 2
 
 On line 12 in main/main.c :
+
+and in a $Program_name_log file:
 
 On line 13 in main/main.c :
 
